@@ -1,0 +1,250 @@
+------------------fatch data ---------------------------
+
+object for getting data - 
+    {
+	"user_id": "57",
+	"emp": "emp" or "manager" or "hr",
+	"date": "2015-07-16"{
+    "user_id": "",
+    "project_id": "",
+    "date": "",
+    "hours_spend": ""
+}
+	}
+
+GET - "localhost:3000/v1/worksheet/fetchdata"
+
+{
+    "message": "Success",
+    "statusCode": 200,
+    "requestUrl": "/v1/worksheet/fetchdata",
+    "data": [
+        {
+            "worksheet_id": 60,
+            "worksheet_title": "workTitle-quod",
+            "worksheet_desc": "Laborum nulla et sapiente est quis ipsum. Nulla nemo sed reprehenderit culpa blanditiis est cumque vel. Veritatis itaque molestiae voluptatem qui eum eligendi magnam. Quas eum possimus accusantium nesciunt asperiores voluptas voluptatem atque.",
+            "worksheet_hours_spend": 2,
+            "worksheet_date": "2015-07-15T18:30:00.000Z",
+            "worksheet_task_type": "feture-improvment",
+            "worksheet_stack": "frontend",
+            "worksheet_user_id": 57,
+            "worksheet_project_id": 14,
+            "worksheet_priority": "10",
+            "worksheet_status": 1,
+            "worksheet_created_at": null,
+            "worksheet_updated_at": null,
+            "worksheet_deleted_at": null,
+            "user_name": "Darrion Shields",
+            "user_designation": "Public Relations Manager",
+            "project_title": "P-Title. Prof.architecto",
+            "atd_in_time": "1987-07-17T13:00:00.000Z",
+            "atd_out_time": "1987-07-17T16:00:00.000Z"
+        }
+    ]
+}
+
+
+--------------------------delete data for perticular project and user -------------------------------------
+
+object for delete data - 
+{
+    "user_id": 71,
+    "date" : "2004-03-04" 
+}
+
+POST - "localhost:3000/v1/worksheet/delete"
+
+{
+    "message": "Success",
+    "statusCode": 200,
+    "requestUrl": "/v1/worksheet/delete",
+    "data": {
+        "generatedMaps": [],
+        "raw": {
+            "fieldCount": 0,
+            "affectedRows": 0,
+            "insertId": 0,
+            "serverStatus": 34,
+            "warningCount": 0,
+            "message": "(Rows matched: 0  Changed: 0  Warnings: 0",
+            "protocol41": true,
+            "changedRows": 0
+        }
+    }
+}{
+    "message": "Success",
+    "statusCode": 200,
+    "requestUrl": "/v1/worksheet/removeuser",
+    "data": {
+        "generatedMaps": [],
+        "raw": {
+            "fieldCount": 0,
+            "affectedRows": 9,
+            "insertId": 0,
+            "serverStatus": 34,
+            "warningCount": 0,
+            "message": "(Rows matched: 9  Changed: 9  Warnings: 0",
+            "protocol41": true,
+            "changedRows": 9
+        }
+    }
+}
+
+---------------------------create data with new project ----------------------
+
+object for create new data - 
+{
+    "user_id": "",
+    "project_id": "",
+    "title": "",
+    "desc": "",
+    "hour_spend": "",
+    "date: "",
+    "task_type": "",
+    "stack": "",
+    "user_id": "",
+    "project_id": "",
+    "priority": "",
+    "status": ""
+}
+
+POST - "localhost:3000/v1/worksheet/save"
+
+{
+    "message": "Success",
+    "statusCode": 200,
+    "requestUrl": "/v1/worksheet/save",
+    "data": {
+        "identifiers": [
+            {
+                "id": 134
+            }
+        ],
+        "generatedMaps": [
+            {
+                "id": 134
+            }
+        ],
+        "raw": {
+            "fieldCount": 0,
+            "affectedRows": 1,
+            "insertId": 134,
+            "serverStatus": 2,
+            "warningCount": 0,
+            "message": "",
+            "protocol41": true,
+            "changedRows": 0
+        }
+    }
+}
+
+---------------------------- remove complete employee data from worksheet -------------------
+
+object - 
+{
+    "user_id" : ""
+}
+
+POST - "localhost:3000/v1/worksheet/removeuser"
+
+{
+    "message": "Success",
+    "statusCode": 200,
+    "requestUrl": "/v1/worksheet/removeuser",
+    "data": {
+        "generatedMaps": [],
+        "raw": {
+            "fieldCount": 0,
+            "affectedRows": 9,
+            "insertId": 0,
+            "serverStatus": 34,
+            "warningCount": 0,
+            "message": "(Rows matched: 9  Changed: 9  Warnings: 0",
+            "protocol41": true,
+            "worksheet_task_type": "optimazation",
+            "worksheet_stack": "backend",
+            "worksheet_user_id": 71,
+            "worksheet_project_id": 32,
+            "worksheet_priority": "10",
+            "worksheet_status": 0,
+            "worksheet_created_at": null,
+            "worksheet_updated_at": null,
+            "worksheet_deleted_at": null,
+            "user_name": "Chelsea Marquardt",
+            "project_title": "P-Title. Dr.facere"
+        }
+    ]
+    }
+}
+
+
+
+--------------------------- fetch data calender wise --------------
+
+object - 
+    {
+	"user_id": 71,
+	"date": "2004-03-04"
+    }
+
+
+POST - "localhost:3000/v1/worksheet/date/fetchdata
+
+{
+    "message": "Success",
+    "statusCode": 200,
+    "requestUrl": "/v1/worksheet/fetchdata",
+    "data": [
+        {
+            "worksheet_id": 1,
+            "worksheet_title": "workTitle-aut",
+            "worksheet_desc": "Dicta et ut est facilis tempora odit eligendi et. Earum architecto magni occaecati dolorum. Qui voluptatibus sequi nihil veniam. Sed et quas explicabo aut perspiciatis quia.",
+            "worksheet_hours_spend": 8,
+            "worksheet_date": "2004-03-03T18:30:00.000Z",
+            "worksheet_task_type": "optimazation",
+            "worksheet_stack": "backend",
+            "worksheet_user_id": 71,
+            "worksheet_project_id": 32,
+            "worksheet_priority": "10",
+            "worksheet_status": 0,
+            "worksheet_created_at": null,
+            "worksheet_updated_at": null,
+            "worksheet_deleted_at": null,
+            "user_name": "Chelsea Marquardt",
+            "project_title": "P-Title. Dr.facere"
+        }
+    ]
+}
+
+
+
+---------------------- update data  -------------------------
+
+object - {
+	"user_id": "71",
+	"project_id": "32",
+	"date": "2004-03-04",
+	"emp":"emp" or "manager" or "hr"
+}
+
+POST - "localhost:3000/v1/worksheet/update"
+
+{
+    "message": "Success",
+    "statusCode": 200,
+    "requestUrl": "/v1/worksheet/update",
+    "data": {
+        "generatedMaps": [],
+        "raw": {
+            "fieldCount": 0,
+            "affectedRows": 1,
+            "insertId": 0,
+            "serverStatus": 34,
+            "warningCount": 0,
+            "message": "(Rows matched: 1  Changed: 1  Warnings: 0",
+            "protocol41": true,
+            "changedRows": 1
+        }
+    }
+}
+
